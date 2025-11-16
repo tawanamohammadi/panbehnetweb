@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    sourcemap: true, // Generate source maps for easier debugging in production
+  },
   server: {
     // This proxy is for the DEVELOPMENT environment ONLY.
     // In production, Nginx will handle this routing.

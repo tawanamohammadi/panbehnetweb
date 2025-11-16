@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, MessageCircle, Shield, Power, Globe, KeyRound, Users, Sparkles } from 'lucide-react';

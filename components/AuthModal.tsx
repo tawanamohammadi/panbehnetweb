@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, User, KeyRound, ShieldCheck } from 'lucide-react';
@@ -150,7 +149,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSuccess }
                         <button
                             onClick={onClose}
                             className="absolute top-4 left-4 w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-gray-700 shadow-md hover:bg-rose-100 hover:text-rose-600 hover:scale-110 hover:rotate-90 transition-all duration-300 z-20"
-                            aria-label="بستن"
+                            aria-label="بستن مودال"
                         >
                             <X size={20} />
                         </button>
@@ -177,13 +176,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSuccess }
                                             <h2 className="text-2xl font-extrabold text-gray-800 mb-2">به دنیای پنبه خوش آمدی!</h2>
                                             <p className="text-gray-600 mb-8">برای ادامه وارد شوید یا ثبت‌نام کنید.</p>
                                             <div className="space-y-4">
-                                                <Button className="w-full rounded-full bg-white text-gray-800 font-bold px-6 py-3 shadow-md hover:shadow-lg hover:bg-gray-50 border border-gray-200 transition-all flex items-center justify-center gap-3">
+                                                <Button aria-label="ادامه با حساب گوگل" className="w-full rounded-full bg-white text-gray-800 font-bold px-6 py-3 shadow-md hover:shadow-lg hover:bg-gray-50 border border-gray-200 transition-all flex items-center justify-center gap-3">
                                                     <GoogleIcon className="w-6 h-6" />
                                                     <span>ادامه با حساب گوگل</span>
                                                 </Button>
                                                 <div className="flex items-center gap-4"><hr className="flex-grow border-gray-200"/><span className="text-sm text-gray-500 font-semibold">یا</span><hr className="flex-grow border-gray-200"/></div>
                                                 <div className="flex flex-col gap-3">
-                                                    <label htmlFor="phone-number" className="sr-only">شماره موبایل خود را وارد کنید</label>
+                                                    <label htmlFor="phone-number" className="sr-only">شماره موبایل</label>
                                                     <input id="phone-number" type="tel" placeholder="شماره موبایل خود را وارد کنید" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}
                                                         className="w-full text-center tracking-wider font-bold text-lg bg-white/70 border-2 border-gray-200 rounded-full px-4 py-3 placeholder:text-gray-400 placeholder:font-medium placeholder:text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
                                                     />
@@ -198,7 +197,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSuccess }
                                             <h2 className="text-2xl font-extrabold text-gray-800 mb-2">ورود به حساب</h2>
                                             <p className="text-gray-600 mb-8">شماره شما: <span className="font-bold tracking-wider">{phoneNumber}</span></p>
                                             <div className="space-y-4">
-                                                <label htmlFor="login-password" className="sr-only">رمز عبور خود را وارد کنید</label>
+                                                <label htmlFor="login-password" className="sr-only">رمز عبور</label>
                                                 <FormInput id="login-password" type="password" placeholder="رمز عبور خود را وارد کنید" icon={<KeyRound size={18} />} />
                                                 <Button onClick={handleLogin} className="w-full rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold px-6 py-3 shadow-lg hover:shadow-orange-400/50 transition-all">ورود</Button>
                                             </div>
@@ -212,7 +211,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSuccess }
                                             <div className="space-y-3">
                                                 <label htmlFor="register-name" className="sr-only">نام کامل</label>
                                                 <FormInput id="register-name" type="text" placeholder="نام کامل" icon={<User size={18} />} value={fullName} onChange={e => setFullName(e.target.value)} />
-                                                <label htmlFor="register-password" className="sr-only">یک رمز عبور قوی انتخاب کن</label>
+                                                <label htmlFor="register-password" className="sr-only">رمز عبور جدید</label>
                                                 <FormInput id="register-password" type="password" placeholder="یک رمز عبور قوی انتخاب کن" icon={<KeyRound size={18} />} value={password} onChange={e => setPassword(e.target.value)} />
                                                 <Button onClick={handleRegister} className="w-full mt-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold px-6 py-3 shadow-lg hover:shadow-orange-400/50 transition-all">ساخت حساب</Button>
                                             </div>

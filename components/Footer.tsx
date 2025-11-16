@@ -106,13 +106,13 @@ const Footer = () => {
                             </Button>
                         </motion.div>
                         <div className="mt-8 pt-6 border-t border-gray-700/50 flex justify-center gap-6">
-                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="Follow us on Twitter">
+                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="ما را در توییتر دنبال کنید">
                                 <Twitter size={20} />
                             </motion.a>
-                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="Follow us on Instagram">
+                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="ما را در اینستاگرام دنبال کنید">
                                 <Instagram size={20} />
                             </motion.a>
-                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="Contact us on Telegram">
+                            <motion.a href="#" whileHover={{ y: -3 }} className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition-colors" aria-label="با ما در تلگرام در ارتباط باشید">
                                 <Send size={20} />
                             </motion.a>
                         </div>
@@ -125,13 +125,13 @@ const Footer = () => {
                         © {new Date().getFullYear()} Panbeh VPN. تمام حقوق پنبه‌ای محفوظ است.
                     </p>
                     <div className="hidden lg:flex items-center gap-4">
-                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="Follow us on Twitter">
+                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="ما را در توییتر دنبال کنید">
                             <Twitter size={20} />
                         </motion.a>
-                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="Follow us on Instagram">
+                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="ما را در اینستاگرام دنبال کنید">
                             <Instagram size={20} />
                         </motion.a>
-                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="Contact us on Telegram">
+                        <motion.a href="#" whileHover={{ y: -3 }} className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 transition-colors" aria-label="با ما در تلگرام در ارتباط باشید">
                             <Send size={20} />
                         </motion.a>
                     </div>

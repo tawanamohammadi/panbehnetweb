@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Rocket, MessageCircleQuestion, Bot } from 'lucide-react';
@@ -68,8 +67,9 @@ const BottomNav = () => {
 
                 if (item.id === 'cta') {
                     return (
-                        <motion.button
+                        <motion.a
                             key={item.id}
+                            href={item.href}
                             className="auth-trigger relative -top-6"
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             whileTap={{ scale: 0.9, rotate: -5 }}
@@ -78,14 +78,14 @@ const BottomNav = () => {
                             <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/40 border-4 border-white">
                                 <PanbehCharacterAnimated float={false} size={40} />
                             </div>
-                        </motion.button>
+                        </motion.a>
                     );
                 }
 
                 const isActive = activeItemId === item.id;
 
                 return (
-                    <a key={item.id} href={item.href} className={`relative flex-1 flex flex-col items-center justify-center h-full rounded-2xl transition-colors duration-300 text-gray-600 focus:outline-none focus:text-orange-600 ${isChatTrigger ? 'chat-trigger' : (isAuthTrigger ? 'auth-trigger' : '')}`} aria-label={item.label}>
+                    <a key={item.id} href={item.href} className={`relative flex-1 flex flex-col items-center justify-center h-full rounded-2xl transition-colors duration-300 text-gray-600 focus:outline-none focus:text-orange-600 ${isChatTrigger ? 'chat-trigger' : ''}`} aria-label={item.label}>
                         <div className="relative flex flex-col items-center pt-1">
                              <motion.div 
                                 className={`relative transition-colors duration-300 ${isActive ? 'text-orange-600' : 'hover:text-orange-500'}`}

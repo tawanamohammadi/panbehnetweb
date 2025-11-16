@@ -210,6 +210,7 @@ const WhyChooseUsSection = () => {
                                         {isSelected && (
                                             <motion.section
                                                 id={`feature-desc-${index}`}
+                                                role="region"
                                                 initial={{ opacity: 0, height: 0 }}
                                                 animate={{ opacity: 1, height: 'auto' }}
                                                 exit={{ opacity: 0, height: 0 }}
